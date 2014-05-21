@@ -1,0 +1,6 @@
+Table Call
+ID int
+Type int (start up, PME, etc)
+Time calltime
+Result int
+Comment string.
