@@ -25,7 +25,7 @@ Ext.define('MyApp.controller.Call', {
     },
 
     launch: function() {
-        console.log("Loaded Call Controler-------------");
+        console.log("Loaded Call Controler.");
     },
 
     onOkButtonTap: function(button) {
