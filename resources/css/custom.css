@@ -1,0 +1,23 @@
+myList {
+}
+.myList .x-list-item {
+    position:relative;
+  /*  color:#333;*/
+    padding:0em 0em;
+    min-height:2.1em;
+  /*  display:-webkit-box;
+    display:box; */
+   /* border-top:1px solid #c8c8c8 */
+
+}
+.myList .x-list-item .brands-row-spon {
+    width: 100%;
+    background-color: #ff0000;
+    padding:0.5em 0.8em;
+    min-height:2.6em;
+}
+.myList .x-list-item .brands-row {
+    width: 100%;
+    min-height:2.6em;
+    padding:0.5em 0.8em;
+}

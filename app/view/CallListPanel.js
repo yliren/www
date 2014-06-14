@@ -14,10 +14,12 @@ var tbarclist = {
 var  callItemTpl = new Ext.XTemplate(
     '<tpl for=".">',
     '<tpl if="result == 0"">',
-    '<div class="call" >{name}</div>',
+    '<div class="brands-row-spon">{name}</div>',
+    //'<div class="call" >{name}</div>',
     '</tpl>',
     '<tpl if="result == 1"">',
-    '<div class="call"  style="background-color:#ff0000">{name}</div>',
+    '<div  class="brands-row">{name}</div>',
+    //'<div class="call"  style="background-color:#ff0000">{name}</div>',
     '</tpl>',
     '</tpl>'
 );
@@ -32,6 +34,7 @@ var listPanel = {
     id: 'itemlist',
     //itemTpl: '<div class="call">{name}  {result}</div>',
     itemTpl:callItemTpl,
+    cls:'myList',
     grouped: true
 };
 
