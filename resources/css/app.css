@@ -6227,7 +6227,7 @@ body.x-desktop {
 }
 
 
-.x-list-item.x-list-item-tpl {
+.x-list-item.x-list-item-tpl { /*Customized for Call list. Yan*/
     padding: 0px 0px;
 }
 
