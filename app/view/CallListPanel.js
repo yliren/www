@@ -14,12 +14,19 @@ var tbarclist = {
 var  callItemTpl = new Ext.XTemplate(
     '<tpl for=".">',
     '<tpl if="result == 0"">',
-    '<div class="brands-row-spon">{name}</div>',
-    //'<div class="call" >{name}</div>',
+    '<div class="cNegative">{name}</div>',
     '</tpl>',
     '<tpl if="result == 1"">',
-    '<div  class="brands-row">{name}</div>',
-    //'<div class="call"  style="background-color:#ff0000">{name}</div>',
+    '<div  class="cOK">{name}</div>',
+    '</tpl>',
+    '<tpl if="result == 2"">',
+    '<div  class="cAbsent">{name}</div>',
+    '</tpl>',
+    '<tpl if="result == 3"">',
+    '<div  class="cOther">{name}</div>',
+    '</tpl>',
+    '<tpl if="result == 4"">',
+    '<div  class="cOperator">{name}</div>',
     '</tpl>',
     '</tpl>'
 );
@@ -34,8 +41,8 @@ var listPanel = {
     id: 'itemlist',
     //itemTpl: '<div class="call">{name}  {result}</div>',
     itemTpl:callItemTpl,
-    cls:'myList',
-    grouped: true
+    cls:'myList'
+   // grouped: true
 };
 
 Ext.define('MyApp.view.CallListPanel', {

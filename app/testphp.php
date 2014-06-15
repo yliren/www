@@ -34,7 +34,7 @@ if ($request_method == "GET"){
         $request_body = file_get_contents('php://input');
 		$call = json_decode($request_body);
 		echo '--------'.$call->name.'----------' ;
-		$sql = "INSERT INTO pcall (`pname`, `type`, `ctime`, `result`, `comment`) VALUES ('".$call->name."', '0', CURRENT_TIMESTAMP, '0', 'aaaa')";
+		$sql = "INSERT INTO pcall (`pname`, `type`, `ctime`, `result`, `comment`) VALUES ('".$call->name."', '".$call->cType."', CURRENT_TIMESTAMP, '".$call->result."', 'aaaa')";
 		$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 
 		$resultstr ='ok';

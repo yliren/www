@@ -6,7 +6,9 @@ Ext.define('MyApp.controller.Call', {
             okButton: '#buttonOK',
 			cancelButton: '#buttonCancel',
             backButton: '#buttonBack',
-			callName: '#cname'
+			callName: '#cname',
+            callResult: '#cresult',
+            callType: '#ctype'
         },
 
         control: {
@@ -29,8 +31,11 @@ Ext.define('MyApp.controller.Call', {
     },
 
     onOkButtonTap: function(button) {
-	    var call = Ext.create('MyApp.model.Call', {name: this.getCallName().getValue()});
+	    var call = Ext.create('MyApp.model.Call', {name: this.getCallName().getValue(),
+                                                   result: this.getCallResult().getValue(),
+                                                   cType: this.getCallType().getValue()});
 
+        console.log("Call result."+this.getCallType().getValue());
         var callsStore = clistpanel.getItems().items[1].getStore();
         /*reload the store attached with the calllist*/
         callsStore.load();

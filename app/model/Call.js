@@ -5,7 +5,7 @@ Ext.define('MyApp.model.Call', {
         fields: [
         //    { name: 'id', type: 'int' },
             { name: 'name', type: 'string' },
-          //  { name: 'cType', type: 'auto' },
+            { name: 'cType', type: 'int' },
          //   { name: 'calltime', type: 'auto' },
             { name: 'result', type: 'int' }
          //   { name: 'comment', type: 'auto' }

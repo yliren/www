@@ -56,12 +56,13 @@ Ext.define('MyApp.view.Call', {
                 {
                     xtype: 'selectfield',
                     label: 'Type',
+                    id: 'ctype',
                     options: [
-                        {text: 'Start-up',  value: 'Start-up'},
-                        {text: 'PME', value: 'PME'},
-                        {text: 'Group',  value: 'Group'},
-						{text: 'Public',  value: 'Public'},
-						{text: 'Other',  value: 'Other'}
+                        {text: 'Start-up',  value: '0'},
+                        {text: 'PME', value: '1'},
+                        {text: 'Group',  value: '2'},
+						{text: 'Public',  value: '3'},
+						{text: 'Other',  value: '4'}
                     ]
                 },
 				{
@@ -79,9 +80,13 @@ Ext.define('MyApp.view.Call', {
 				{
                     xtype: 'selectfield',
                     label: 'Result',
+                    id: 'cresult',
                     options: [
-                        {text: 'Negative',  value: 'N'},
-                        {text: 'Appointement OK', value: 'O'}
+                        {text: 'Negative',  value: '0'},
+                        {text: 'Appointement OK', value: '1'},
+                        {text: 'Staff absent', value: '2'},
+                        {text: 'Got other contact', value: '3'},
+                        {text: 'Operator blocking', value: '4'}
                     ]
                 },{
                     xtype: 'textareafield',
