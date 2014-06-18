@@ -3,7 +3,7 @@ Ext.define('MyApp.store.CallList', {
     config: {
 			model : 'MyApp.model.Call',
 			autoLoad : true,
-			sorters: 'name',
+			sorters: 'cTime',
 	
 			grouper: {
 			groupFn: function(record) {
