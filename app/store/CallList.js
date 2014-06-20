@@ -3,13 +3,15 @@ Ext.define('MyApp.store.CallList', {
     config: {
 			model : 'MyApp.model.Call',
 			autoLoad : true,
-			sorters: 'cTime',
-	
+			sorters: [{
+                property: 'cTime',
+                direction: 'DESC'}],
+	        /*
 			grouper: {
 			groupFn: function(record) {
 				return record.get('name')[0];
 			}
-			},
+			},*/
 			proxy: {
 	            type: 'ajax',
 				//url: 'app/testphp.php?act=loadcall',
