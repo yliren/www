@@ -41,7 +41,16 @@ var listPanel = {
     id: 'itemlist',
     //itemTpl: '<div class="call">{name}  {result}</div>',
     itemTpl:callItemTpl,
-    cls:'myList'
+    cls:'myList',
+    listeners : {
+        itemtap: function (list, index, item, record) {
+            console.log("item selected!"+record);
+            //charger la page Call avec les données correspondantes.
+            cview.
+            Ext.Viewport.setActiveItem(cview);
+        }
+    }
+
    // grouped: true
 };
 
