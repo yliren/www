@@ -44,9 +44,8 @@ var listPanel = {
     cls:'myList',
     listeners : {
         itemtap: function (list, index, item, record) {
-            console.log("item selected!"+record);
             //charger la page Call avec les données correspondantes.
-            cview.
+            MyApp.app.getController('MyApp.controller.Call').applyCall(record);
             Ext.Viewport.setActiveItem(cview);
         }
     }

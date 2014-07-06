@@ -21,6 +21,5 @@ Ext.define('MyApp.controller.CallList', {
     onBackButtonclistTap: function(button) {
         Ext.Viewport.remove(Ext.Viewport.getActiveItem(), false);
     }
-
 });
 

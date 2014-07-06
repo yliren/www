@@ -45,7 +45,13 @@ Ext.define('MyApp.controller.Call', {
     },
 	onCancelButtonTap: function(button) {
 		Ext.Viewport.remove(Ext.Viewport.getActiveItem(), false);
-    }
+    },
 
+    applyCall:function(record){
+        this.getCallName().setValue(record.data.name);
+        this.getCallType().setValue(record.data.cType);
+        this.getCallResult().setValue(record.data.result);
+
+    }
 
 });

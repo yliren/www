@@ -23,7 +23,11 @@ if ($request_method == "GET"){
 		while($data = mysql_fetch_assoc($req))
 			{
 			//returner la totalit� des donn�es
-			$resultstr = $resultstr.'{\'id\':'.$data['ID'].',\'name\':\''.$data['pname'].'\', \'result\':'.$data['result'].',\'cTime\':\''.$data['ctime'].'\'}'.',';
+			$resultstr = $resultstr.'{\'id\':'.$data['ID'].',
+			                          \'name\':\''.$data['pname'].'\',
+			                          \'result\':'.$data['result'].',
+			                          \'cType\':'.$data['type'].',
+			                          \'cTime\':\''.$data['ctime'].'\'}'.',';
 			//echo '<b>'.$data['type'].' '.$data['ctime'].'</b> ('.$data['comment'].')';
 			}
 

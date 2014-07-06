@@ -3,7 +3,7 @@ Ext.define('MyApp.model.Call', {
     
     config: {
         fields: [
-        //    { name: 'id', type: 'int' },
+            { name: 'id', type: 'int' },
             { name: 'name', type: 'string' },
             { name: 'cType', type: 'int' },
             { name: 'cTime', type: 'string' },
