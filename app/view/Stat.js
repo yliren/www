@@ -20,20 +20,20 @@ var tbar = {
 	]
 }
 var storestat = Ext.create("Ext.data.Store", {
-    fields: ['name', 'value1', 'value2'],
+    fields: ['calldate', 'resultOk', 'resultKo', 'getOtherInfo'],
     data: [
-        { name: 'Jan', value1: 5, value2: 12 },
-        { name: 'Feb', value1: 23, value2: 42 },
-        { name: 'Mar', value1: 83, value2: 13 },
-        { name: 'Apr', value1: 233, value2: 34 },
-        { name: 'May', value1: 509, value2: 24 },
-        { name: 'Jun', value1: 864, value2: 2 },
-        { name: 'Jul', value1: 1144, value2: 25 },
-        { name: 'Aug', value1: 1179, value2: 24 },
-        { name: 'Sep', value1: 946, value2: 39 },
-        { name: 'Oct', value1: 591, value2: 42 },
-        { name: 'Nov', value1: 288, value2: 23 },
-        { name: 'Dec', value1: 109, value2: 34 }
+        { calldate: 'Jan', resultOk: 5, resultKo: 12,  getOtherInfo: 5},
+        { calldate: 'Feb', resultOk: 23, resultKo: 42,  getOtherInfo: 4},
+        { calldate: 'Mar', resultOk: 8, resultKo: 13,  getOtherInfo: 7},
+        { calldate: 'Apr', resultOk: 23, resultKo: 34,  getOtherInfo: 9},
+        { calldate: 'May', resultOk: 5, resultKo: 24,  getOtherInfo: 3},
+        { calldate: 'Jun', resultOk: 8, resultKo: 2,  getOtherInfo: 3},
+        { calldate: 'Jul', resultOk: 11, resultKo: 25,  getOtherInfo: 23},
+        { calldate: 'Aug', resultOk: 11, resultKo: 24,  getOtherInfo: 4},
+        { calldate: 'Sep', resultOk: 9, resultKo: 39,  getOtherInfo: 31},
+        { calldate: 'Oct', resultOk: 1, resultKo: 42,  getOtherInfo: 20},
+        { calldate: 'Nov', resultOk: 2, resultKo: 23,  getOtherInfo: 1},
+        { calldate: 'Dec', resultOk: 1, resultKo: 34,  getOtherInfo: 3}
     ]
 });
 
@@ -59,8 +59,8 @@ Ext.define('MyApp.view.Stat', {
             series: [
                 {
                     type: 'bar',
-                    xField: 'name',
-                    yField: ['value2'],
+                    xField: 'calldate',
+                    yField: ['resultKo', 'resultOk'],
                     title: ['RDV OK'],
                     style: {
                         maxBarWidth: 15,
@@ -78,27 +78,22 @@ Ext.define('MyApp.view.Stat', {
                 {
                     type: 'numeric',
                     position: 'left',
-                    grid: {
-                        odd: {
-                            fill: '#fafafa'
-                        }
-                    },
-                    style: {
+                    title: 'Nb calls',
+                   /* style: {
                         axisLine: false,
                         estStepSize: 20,
                         stroke: '#ddd'
-                    },
+                    },*/
                     minimum: 0,
                     maximum: 50
                 },
                 {
                     type: 'category',
-                    position: 'bottom',
-                    visibleRange: [0, 0.7],
-                    style: {
+                    position: 'bottom'
+                   /* style: {
                         estStepSize: 1,
                         stroke: '#999'
-                    }
+                    }*/
                 }
             ]
         }
