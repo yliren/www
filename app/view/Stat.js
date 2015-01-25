@@ -60,8 +60,9 @@ Ext.define('MyApp.view.Stat', {
                 {
                     type: 'bar',
                     xField: 'calldate',
-                    yField: ['resultKo', 'resultOk'],
-                    title: ['RDV OK'],
+                    yField: ['resultKo','resultOk','getOtherInfo'],
+                    title: ['KO','OK','Get others info'],
+                    stacked : false,
                     style: {
                         maxBarWidth: 15,
                         lineWidth: 1.5,
